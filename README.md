@@ -21,7 +21,7 @@ The following image shows the topic of essays, which is stored in a csv file:
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/data.png) 
 
-## Optimization Problem
+## Step1. Optimization Problem
 Accordingly, the score for a single essay can be calcualted as follows:
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/single_score.jpg) 
@@ -38,7 +38,7 @@ We can ignore avg_e and avg_s, then to maximize the score of a single essay we n
 
 To solve this problem, we resort to the "scipy" library, details are shown in the "optimization.py" file.
 
-
+## Step 2: LLM Prompt
 
 
 
