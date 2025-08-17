@@ -36,7 +36,7 @@ We can ignore avg_e and avg_s, then to maximize the score of a single essay we n
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/Optimization.jpg) 
 
-To solve this problem, we resort to the "scipy" library, details are shown in the "optimization.py" file.
+To solve this problem, we resort to the "scipy" library, details are shown in the "optimization.py" file. After solving this optimization problem, we can see to maximize the score for a single essay, the score has to be 9, 9, 0. 
 
 ## Step 2: LLM Prompt
 
