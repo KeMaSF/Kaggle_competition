@@ -5,7 +5,33 @@ There are three LLM judges, we need to generate 3 essays such that the score gen
 
 The score is calculated as follows:
 
-$final\_score$
+![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/equation.png) 
+
+avg_h: the variance between the scores returned by the 3 judges for a single essay;
+
+min_v: the variance between the scores returned by a single judge across every essay;
+
+avg_e: English language confidence scores;
+
+avg_s: sequence similarity scores;
+
+avg_q: an average of three quality scores for every essay;
+
+The following image shows the topic of essays, which is stored in a csv file:
+![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/data.png) 
+
+## Optimization Problem
+Accordingly, the score for a single essay can be calcualted as follows:
+
+![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/single_score.jpg) 
+
+Suppose the scores given by three LLM judges for a single essay are $q_1, q_2, q_3$, then we have:
+
+avg_q = mean($q_1, q_2, q_3$)
+
+avg_h = var($q_1, q_2, q_3$)
+
+We can ignore avg_e, avg_s, then to maximize the score of a single essay we need to solve the following problem:
 
 Used most commonly used English words from https://www.kaggle.com/datasets/jiprud/words-en. 
 
