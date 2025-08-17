@@ -36,7 +36,7 @@ We can ignore avg_e and avg_s, then to maximize the score of a single essay we n
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/Optimization.jpg) 
 
-To solve this problem, we resort to the "scipy" library, and please check the "optimization.py" file.
+To solve this problem, we resort to the "scipy" library, details are shown in the "optimization.py" file.
 
 
 
