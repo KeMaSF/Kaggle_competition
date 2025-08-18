@@ -42,13 +42,13 @@ To solve this problem, we resort to the "scipy" library, details are shown in th
 
 To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, inspired by [Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition](https://arxiv.org/pdf/2311.16119) for this competition we designed the following three techniques:
 
-### Prompt Technique 1:
+### Prompt Hack 1 (Refusal Suppression):
+This class of attacks instructs a modal to respond in certain ways.
 
+### Prompt Hack 2 (Context Ignoring Attack):
+This hack method combines a Simple Instruction Attack with an additional instruction to ignore other instructions
 
-### Prompt Technique 2:
-
-
-### Prompt Technique 3:
+### Prompt Hack 3 (Context Ignoring Attack):
 
 
 Used most commonly used English words from https://www.kaggle.com/datasets/jiprud/words-en. 
