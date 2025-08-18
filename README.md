@@ -11,7 +11,7 @@ avg_h: the variance between the scores returned by the 3 judges for a single ess
 
 min_v: the variance between the scores returned by a single judge across every essay;
 
-avg_e: English language confidence scores;
+[avg_e](https://github.com/pemistahl/lingua): English language confidence scores;
 
 avg_s: sequence similarity scores;
 
