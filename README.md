@@ -40,7 +40,7 @@ To solve this problem, we resort to the "scipy" library, details are shown in th
 
 ## Step 2: LLM Prompt
 
-To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, inspired by "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition" for this competition we designed the following three techniques:
+To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, inspired by [Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition](https://arxiv.org/pdf/2311.16119) for this competition we designed the following three techniques:
 
 ### Prompt Technique 1:
 
