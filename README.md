@@ -13,7 +13,7 @@ min_v: the variance between the scores returned by a single judge across every e
 
 [avg_e](https://github.com/pemistahl/lingua): English language confidence scores;
 
-avg_s: sequence similarity scores;
+[avg_s](https://docs.python.org/3/library/difflib.html): sequence similarity scores;
 
 avg_q: an average of three quality scores for every essay;
 
