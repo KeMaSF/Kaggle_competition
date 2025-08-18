@@ -17,7 +17,7 @@ avg_s: sequence similarity scores;
 
 avg_q: an average of three quality scores for every essay;
 
-The following image shows the topic of essays, which is stored in a CSV file:
+The following image shows the topic of essays, which is stored in a CSV [CSV](https://www.kaggle.com/competitions/llms-you-cant-please-them-all/data) file:
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/data.png) 
 
