@@ -40,6 +40,15 @@ To solve this problem, we resort to the "scipy" library, details are shown in th
 
 ## Step 2: LLM Prompt
 
+To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, for this competition we designed the following three techniques:
+
+### Prompt Technique 1:
+
+
+### Prompt Technique 2:
+
+
+### Prompt Technique 3:
 
 
 Used most commonly used English words from https://www.kaggle.com/datasets/jiprud/words-en. 
