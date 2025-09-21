@@ -42,7 +42,7 @@ Alternatively, for the objective function, the numerator can be written as below
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/quadratic.png)
 
-The matrix is symmetric, eigvalues are {0, 0, 3} all no less that 0, then the numerator is a convex function. The ojbective function is a quadratic-over-linear problem. We are now trying to maximize a convex function, then the optimal points are taken at the boundary points, which are: (0,0,0), (0, 0, 9), (0, 9, 9), (0, 9, 0), (9, 9, 9), (9, 0, 0), (9, 9, 0), (9, 0, 9). We can check those one by one, and boundary point (9, 9, 0) gives us the global optimal. 
+The matrix is symmetric, eigvalues are {0, 0, 3} all no less that 0, then the numerator is a convex function. The ojbective function is a quadratic-over-linear problem, which is proven to be convex according to "Convex Optimization". We are now trying to maximize a convex function, then the optimal points are taken at the boundary points, which are: (0,0,0), (0, 0, 9), (0, 9, 9), (0, 9, 0), (9, 9, 9), (9, 0, 0), (9, 9, 0), (9, 0, 9). We can check those one by one, and boundary point (9, 9, 0) gives us the global optimal. 
 
 ## Step 2: LLM Prompt
 
