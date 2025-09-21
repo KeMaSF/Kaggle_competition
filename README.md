@@ -38,6 +38,12 @@ We can ignore avg_e and avg_s as long as we are using English in our generated e
 
 To solve this problem, we resort to the "scipy" library, details are shown in the "optimization.py" file. After solving this optimization problem, we can see to maximize the score for a single essay, the score has to be 9, 9, 0. 
 
+Alternatively, for the objective function, the numerator can be written as below:
+
+![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/quadratic.png)
+
+We can verify it is convex. And now the problem is a quadratic-over-linear problem, which is a convex function. We are now trying to maximize a convex function, then the optimal points are taken at the boundary points, which are: (0,0,0), (0, 0, 9), (0, 9, 9), (0, 9, 0), (9, 9, 9), (9, 0, 0), (9, 9, 0), (9, 0, 9). We can check those one by one, and boundary point (9, 9, 0) gives us the global optimal. 
+
 ## Step 2: LLM Prompt
 
 To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, inspired by [Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition](https://arxiv.org/pdf/2311.16119) for this competition we designed the following three techniques:
