@@ -11,9 +11,9 @@ avg_h: the variance between the scores returned by the 3 judges for a single ess
 
 min_v: the variance between the scores returned by a single judge across every essay;
 
-[avg_e](https://github.com/pemistahl/lingua): English language confidence scores, the max value can be taken at 1, see file "ConfidenceScore.py";
+[avg_e](https://github.com/pemistahl/lingua): English language confidence scores, the max value can be taken at 1, see file [ConfidenceScore.py](https://github.com/KeMaSF/Kaggle_competition/blob/main/ConfidenceScore.py);
 
-[avg_s](https://docs.python.org/3/library/difflib.html): sequence similarity scores, the minimal value is approximately at 0.2, see file "SimilarityScore.py";
+[avg_s](https://docs.python.org/3/library/difflib.html): sequence similarity scores, the minimal value is approximately at 0.2, see file [SimilarityScore.py](https://github.com/KeMaSF/Kaggle_competition/blob/main/SimilarityScore.py);
 
 avg_q: an average of three quality scores for every essay;
 
@@ -42,7 +42,7 @@ Alternatively, for the objective function, the numerator can be written as below
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/quadratic.png)
 
-The matrix is symmetric, eigvalues are {0, 0, 3} all no less that 0, then the numerator is a convex function. The ojbective function is a quadratic-over-linear problem, which is proven to be convex according to  [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf). We are now trying to maximize a convex function, then the optimal points are taken at the boundary points, which are: (0,0,0), (0, 0, 9), (0, 9, 9), (0, 9, 0), (9, 9, 9), (9, 0, 0), (9, 9, 0), (9, 0, 9). We can check those one by one, and boundary point (9, 9, 0) gives us the global optimal at 6. Therefore, the orgianl problem has maximum value at around 30. We also wrote a python file to solve this problem using spicy [optimization.py](https://github.com/KeMaSF/Kaggle_competition/blob/main/optimization.py)
+The matrix is symmetric, eigvalues are {0, 0, 3} all no less that 0, then the numerator is a convex function. The objective function is a quadratic-over-linear problem, which is proven to be convex according to  [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf). We are now trying to maximize a convex function, then the optimal points are taken at the boundary points, which are: (0,0,0), (0, 0, 9), (0, 9, 9), (0, 9, 0), (9, 9, 9), (9, 0, 0), (9, 9, 0), (9, 0, 9). We can check those one by one, and the boundary point (9, 9, 0) gives us the global optimal at 6. Therefore, the original problem has a maximum value at around 30. We also wrote a python file to solve this problem using spicy [optimization.py](https://github.com/KeMaSF/Kaggle_competition/blob/main/optimization.py)
 
 ## Step 2: LLM Prompt
 
