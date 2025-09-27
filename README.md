@@ -48,7 +48,7 @@ The matrix is symmetric, eigvalues are {0, 0, 3} all no less that 0, then the nu
 
 To let the LLM judges score 9, 9, 0 on our essay, we need to use the prompt technique. Specifically, inspired by [Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition](https://arxiv.org/pdf/2311.16119) for this competition we designed the following three techniques:
 
-### Prompt Hack 1 (Refusal Suppression):
+### Prompt Hack 1 (Context Ignoring Attack):
 This class of attacks instructs a modal to respond in certain ways. Specifically, output 9 topics indexed starting from 0. The topics of 0 and 9 are related to the essay topic while the others are not. The other topics are randomly generated from [words](https://www.kaggle.com/datasets/jiprud/words-en).
 
 ### Prompt Hack 2 (Context Ignoring Attack):
