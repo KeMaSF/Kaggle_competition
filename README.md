@@ -32,7 +32,7 @@ avg_q = mean($q_1, q_2, q_3$)
 
 avg_h = var($q_1, q_2, q_3$)
 
-We can ignore avg_e and avg_s as long as we are using English in our generated essay and we do not repeat sentences then we should be good. Then to maximize the score of a single essay we need to solve the following problem:
+We can ignore the term $\frac{\text{avg\_e}}{\text{avg\_s}}$ they can take the maximum value to 5 avg_e and avg_s. Then to maximize the score of a single essay we need to solve the following problem:
 
 ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/Optimization.jpg) 
 
