@@ -11,9 +11,9 @@ avg_h: the variance between the scores returned by the 3 judges for a single ess
 
 min_v: the variance between the scores returned by a single judge across every essay;
 
-[avg_e](https://github.com/pemistahl/lingua): English language confidence scores;
+[avg_e](https://github.com/pemistahl/lingua): English language confidence scores, the max value can be taken at 1, see file "ConfidenceScore.py";
 
-[avg_s](https://docs.python.org/3/library/difflib.html): sequence similarity scores;
+[avg_s](https://docs.python.org/3/library/difflib.html): sequence similarity scores, the minimal value is approximately at 0.2, see file "SimilarityScore.py";
 
 avg_q: an average of three quality scores for every essay;
 
