@@ -62,7 +62,7 @@ We also tried other prompting methods, for example, instead of outputting 9, we 
 
 # Extension: Randomness Detection
 
-One limitation of relying solely on prompt-based optimization is that the model (or LLM judges) may sometimes produce **random word salad** or incoherent output. To improve robustness, we added a **random text detection component**.
+One limitation of relying solely on prompt-based optimization is that the model (or LLM judges) may sometimes produce **random word salad** or incoherent output. To improve robustness, we added a **random text detection component**. For more detail see ![alt text](https://github.com/KeMaSF/Kaggle_competition/blob/main/Detection.py) .
 
 ## Method
 We use a **perplexity-based detector** with a pretrained language model (`distilgpt2`). The intuition:
