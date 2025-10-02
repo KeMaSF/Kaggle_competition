@@ -59,12 +59,45 @@ Similarily, randomly generate the essay using warning words, such as, "warning",
 
 We also tried other prompting methods, for example, instead of outputting 9, we let the judge output 0 instead. However, this doesn't work well. Therefore, we use the above 3 prompting methods for this competition.
 
-# Extention
 
-Random text detection to improve the robustness of the model ouput.
+# Extension: Randomness Detection
 
-Computes precision–recall curve at many thresholds. Maximizing F1 is a common criterion if want best trade-off between precision (few false positives) and recall (few false negatives).
+One limitation of relying solely on prompt-based optimization is that the model (or LLM judges) may sometimes produce **random word salad** or incoherent output. To improve robustness, we added a **random text detection component**.
 
+## Method
+We use a **perplexity-based detector** with a pretrained language model (`distilgpt2`). The intuition:
+
+- Natural language → lower perplexity (the LM finds the sequence predictable).
+- Randomly generated text (e.g. "apple sky pizza run ...") → very high perplexity.
+
+## Dataset
+To tune the detector:
+- **Positive class (random)**: synthetic word-salad texts generated via `random.choices`.
+- **Negative class (natural)**: real texts (IMDB reviews, Wikipedia, etc.).
+
+## Threshold Selection
+We convert perplexity scores into binary predictions (random vs natural) using thresholds:
+- **Best F1 threshold**: pick the cutoff that maximizes F1 score on validation.
+- **Youden’s J threshold**: pick the cutoff that maximizes `TPR - FPR` on the ROC curve.
+
+Helper functions:
+- `best_threshold_by_f1`: finds the F1-optimal threshold.
+- `threshold_youden_j`: finds the ROC-optimal threshold.
+- `evaluate_at_threshold`: evaluates confusion matrix, F1, precision, recall at any threshold.
+
+## Why This Matters
+- Ensures that optimization or prompt-hacking outputs are not just random garbage.
+- Increases robustness of downstream evaluations.
+- Provides a quantitative way to filter out "hallucinated" or "nonsense" responses.
+
+## Example
+```python
+score = perplexity("The pizza was delicious but service was slow.")
+print(score)  # ~low perplexity = natural
+
+score = perplexity("apple sky pizza run blue dog lamp river ...")
+print(score)  # ~high perplexity = random
+```
 
 
 
